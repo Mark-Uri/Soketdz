@@ -97,7 +97,7 @@ int main()
     bind(server_socket, (sockaddr*)&server, sizeof(server));
     listen(server_socket, MAX_CLIENTS);
 
-    cout << "Сервер запущен Ожидание подключений...\n";
+    cout << "Сервер запущен Ожидание подключений..."<<endl;
 
     fd_set readfds;
 
@@ -148,7 +148,7 @@ int main()
             }
             in.close();
 
-            string welcome = string(nickname) + " присоединился к чату \n";
+            string welcome = string(nickname) + " присоединился к чату "<<endl;
 
             broadcast(welcome);
         }
